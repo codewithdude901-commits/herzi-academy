@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -70,7 +70,7 @@ export default function WhyChooseHerzi() {
             <motion.div
               key={c.title}
               className="rounded-lg"
-              //@ts-expect-error
+              // @ts-expect-error error is expected here
               variants={cardVariants}
               whileHover={{
                 translateY: 10,

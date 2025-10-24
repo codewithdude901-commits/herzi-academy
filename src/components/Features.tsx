@@ -221,7 +221,7 @@ export default function HerziFeatures() {
             {FEATURES.map((feature, i) => (
               <article
                 key={i}
-                // @ts-expect-error
+                // @ts-expect-error error is expected here
                 ref={(el) => (panelsRef.current[i] = el)}
                 className="panel rounded-2xl shadow-md justify-center flex flex-col text-white py-5 sm:py-6 px-4 sm:px-6"
                 style={{
