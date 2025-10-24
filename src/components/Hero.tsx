@@ -6,7 +6,7 @@ import { MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const imageSrc = "/hero-image1.png";
+const imageSrc = "/hero-image1.jpg";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 18 },
@@ -44,11 +44,11 @@ const badgeVariant = {
 export default function Hero() {
   return (
     <section
-      className="relative isolate overflow-hidden scroll-mt-20 py-12 select-none"
+      className="relative isolate overflow-hidden scroll-mt-20 pt-10 md:pt-16  xl:pt-20 select-none"
       id="home"
     >
       <div className="mx-auto max-w-7xl px-4 xl:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center md:mt-10 bg-[#f4f3ea] rounded-3xl overflow-hidden ">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-[#f4f3ea] rounded-2xl overflow-hidden ">
           {/* Left content: controlled by one container */}
           <motion.div
             className="z-10 px-4 lg:px-10 py-10 lg:py-16 justify-center flex flex-col items-center md:items-start"
@@ -72,7 +72,7 @@ export default function Hero() {
               Career in <span className="text-[#614932]">Germany </span>
             </h1>
 
-            <p className="mt-4 max-w-lg text-lg tracking-wide">
+            <p className="mt-4 max-w-lg text-lg tracking-wide text-center md:text-left">
               Trusted partner for students and professionals aiming to study,
               work, and settle in Germany.
             </p>
@@ -81,7 +81,7 @@ export default function Hero() {
               <Link href={"/#services"}>
                 <div>
                   <Button
-                    className="rounded-xl w-52 py-3 shadow-lg bg-[#614932] hover:bg-[#7e5f42] text-white text-base cursor-pointer"
+                    className="rounded-xl w-48 py-3 shadow-lg bg-[#614932] hover:bg-[#7e5f42] text-white text-base cursor-pointer"
                     size="lg"
                   >
                     Learn how it works
@@ -95,7 +95,7 @@ export default function Hero() {
               >
                 <div>
                   <Button
-                    className="rounded-xl py-3 text-base w-52 cursor-pointer "
+                    className="rounded-xl py-3 text-base w-48 cursor-pointer "
                     size="lg"
                   >
                     <MessageCircle className="h-5 w-5" strokeWidth={2.5} />

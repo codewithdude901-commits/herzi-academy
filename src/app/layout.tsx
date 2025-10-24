@@ -1,16 +1,15 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+
 import "./globals.css";
 import { generalSans } from "@/fonts";
-
-const manrope = Manrope({ subsets: ["latin"] });
+import { structuredData } from "@/lib/json-ld-schema";
 
 export const metadata: Metadata = {
   title:
     "Herzi – Best German Language Academy & Recruitment Consultant in Kerala for Study and Work in Germany",
   description:
-    "Learn German with Herzi Academy. Exam prep, online & offline classes, Ausbildung & Masters recruitment, nursing careers, APS & attestation support.",
+    "Herzi Academy facilitates exam preparation, online & offline classes, Ausbildung & Masters recruitment, Nursing careers, APS & Attestation support.",
   keywords: [
     "German Language Academy",
     "German Courses, Study in Germany",
@@ -23,28 +22,32 @@ export const metadata: Metadata = {
     "German CV",
     "Learn German Online",
     "German Offline Classes",
+    "best german academy in kerala",
+    "best german language academy in kerala",
   ],
+
   authors: [{ name: "Herzi German Academy" }],
   applicationName: "Herzi German Academy",
-  metadataBase: new URL("https://www.herziacademy.com"),
+  metadataBase: new URL("https://herziacademy.com"),
   alternates: {
-    canonical: "https://www.herziacademy.com",
+    canonical: "https://herziacademy.com",
   },
   openGraph: {
     title:
       "Herzi – Best German Language Academy & Recruitment Consultant in Kerala for Study and Work in Germany",
     description:
-      "Learn German with Herzi Academy. Exam prep, online & offline classes, Ausbildung & Masters recruitment, nursing careers, APS & attestation support.",
-    url: "https://www.herziacademy.com",
-    siteName: "Herzi German Academy",
+      "Herzi Academy facilitates exam preparation, online & offline classes, Ausbildung & Masters recruitment, Nursing careers, APS & Attestation support.",
+    url: "https://herziacademy.com",
+    siteName: "Herzi Academy",
     images: [
       {
-        url: "https://www.herziacademy.com/og-image.jpg",
+        url: "https://herziacademy.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Herzi German Academy — Best German Language Academy & Recruitment Consultant in Kerala",
       },
     ],
+
     locale: "en_US",
     type: "website",
   },
@@ -53,12 +56,20 @@ export const metadata: Metadata = {
     title:
       "Herzi – Best German Language Academy & Recruitment Consultant in Kerala for Study and Work in Germany",
     description:
-      "Learn German with Herzi Academy. Exam prep, online & offline classes, Ausbildung & Masters recruitment, nursing careers, APS & attestation support.",
-    images: ["https://www.herziacademy.com/og-image.jpg"],
+      "Herzi Academy facilitates exam preparation, online & offline classes, Ausbildung & Masters recruitment, Nursing careers, APS & Attestation support.",
+    images: ["https://herziacademy.com/og-image.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -69,6 +80,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
       <body className={`${generalSans.className} antialiased`}>{children}</body>
     </html>
   );
