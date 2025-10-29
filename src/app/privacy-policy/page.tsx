@@ -178,7 +178,7 @@ export default function PrivacyPolicyPage() {
               If you have any questions or concerns about this Privacy Policy,
               please contact:
             </p>
-            <ul className="list-none space-y-1">
+            <ul className="list-none space-y-1 select-text">
               <li>
                 <span className="font-semibold">Herzi German Academy </span>
               </li>
@@ -194,7 +194,15 @@ export default function PrivacyPolicyPage() {
                   info@herziacademy.com
                 </Link>
               </li>
-              <li>Phone: +91 80 89 80 80 42</li>
+              <li>
+                Phone:{" "}
+                <a
+                  className="text-[#1942c7] hover:underline font-medium"
+                  href="tel:+918089808042"
+                >
+                  +91 80 89 80 80 42
+                </a>
+              </li>
             </ul>
           </div>
         </div>

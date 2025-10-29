@@ -60,7 +60,6 @@ export default function HomePage() {
             <div className="mb-12">
               <div className="space-y-4 ">
                 <div className=" text-lg sm:text-xl text-center">
-              
                   Best German Language Academy in Kerala, India.
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-medium leading-tight text-center">
@@ -131,12 +130,12 @@ export default function HomePage() {
         {/* CTA Section */}
 
         <section
-          className="py-16 xl:py-24 select-none px-4 xl:px-0 scroll-mt-16"
+          className="py-16 xl:py-24  px-4 xl:px-0 scroll-mt-16"
           id="contact"
         >
           <div className="max-w-7xl mx-auto space-y-10">
             {/* Text & CTA */}
-            <div className="space-y-6">
+            <div className="space-y-6 select-none">
               <div className="space-y-4">
                 <div className="text-lg sm:text-xl text-center">
                   Bring everything together!
@@ -160,18 +159,17 @@ export default function HomePage() {
                 Our Branches & Locations
               </h3>
 
-              {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"> */}
-              <div className="max-w-2xl mx-auto">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Branch Card */}
                 {[
-                  // {
-                  //   mode: "online & Offline",
-                  //   city: "Perumbavoor",
-                  //   address:
-                  //     "Herzi German Academy ,1 st Floor, Jaya Hardwares, AM Road Perumbavoor Main Signal Junction, Perumbavoor, Kerala 683542",
-                  //   phone: "+91 80 89 80 80 42",
-                  //   map: "",
-                  // },
+                  {
+                    mode: "online & Offline",
+                    city: "Perumbavoor",
+                    address:
+                      "Herzi German Academy ,1 st Floor, Jaya Hardwares, AM Road Perumbavoor Main Signal Junction, Perumbavoor, Kerala 683542",
+                    phone: "+91 80 89 80 80 42",
+                    map: "",
+                  },
                   {
                     mode: "online & Offline",
                     city: "Kothamangalam",
@@ -180,14 +178,14 @@ export default function HomePage() {
                     phone: "+91 80 89 80 80 42",
                     map: "https://share.google/ZGwkmz0vXmXuv9jQ8",
                   },
-                  // {
-                  //   mode: "online & Offline",
-                  //   city: "Calicut",
-                  //   address:
-                  //     "Herzi German Academy Kozhikode 2nd Floor, Amal Arcade, near St.Michael's School, West Hill, Kozhikode, Kerala 673005",
-                  //   phone: "+91 80 89 80 80 42",
-                  //   map: "",
-                  // },
+                  {
+                    mode: "online & Offline",
+                    city: "Calicut",
+                    address:
+                      "Herzi German Academy Kozhikode 2nd Floor, Amal Arcade, near St.Michael's School, West Hill, Kozhikode, Kerala 673005",
+                    phone: "+91 80 89 80 80 42",
+                    map: "",
+                  },
                 ].map((branch) => (
                   <div
                     key={branch.city}
@@ -198,6 +196,13 @@ export default function HomePage() {
                       {branch.address}
                     </p>
                     <p className="text-sm font-medium mb-3">{branch.mode}</p>
+
+                    <a
+                      className="text-sm font-medium mb-3"
+                      href="tel:+918089808042"
+                    >
+                      +91 80 89 80 80 42
+                    </a>
 
                     {/* {branch.map && (
                       <Link

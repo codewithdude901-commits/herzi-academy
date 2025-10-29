@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const FEATURES = [
   {
     title: "German Language Classes (A1–B2)",
-    emoji: "🇩🇪",
+    emoji: "🧑‍🏫",
     text: `Whether you want to learn the language or prepare for a new life, our services are designed to make your transition smooth.\n\nOur German Language Classes (A1–B2) will get you ready for proficiency exams like Goethe, telc, and ÖSD. Our curriculum covers all four essential skills: speaking, listening, reading, and writing.\n\nReady to speak German? Let's get started!`,
   },
   {
@@ -26,13 +26,14 @@ const FEATURES = [
     text: `Ausbildung, or vocational training, is a unique way to gain a qualification in Germany. Herzi helps you get into a program that combines theoretical knowledge with practical, on-the-job training.\n\nFrom nursing to other in-demand fields, Ausbildung can be your path to a stable and rewarding career.\n\nFind out how you can start your Ausbildung journey with Herzi.`,
   },
   {
-    title: "To all Indian nurses! Your dream job in Germany is within reach!",
-    emoji: "🇮🇳",
+    title:
+      "To all Indian nurses! Your dream job in Germany is within reach!",
+    emoji: "🩺",
     text: `Herzi offers specialized nurse migration services to help you make the move. We provide:\n\n1. German language training\n2. Accommodation & job placement assistance\n3. Visa & settlement support\n\nWe handle the details so you can focus on your future. Tag a nurse who needs to see this!`,
   },
   {
     title: "Documents ready for Germany?",
-    emoji: "📄",
+    emoji: "📁",
     text: `Don't let document requirements hold you back. Herzi offers professional translation and attestation services to ensure your educational and professional documents are perfectly prepared for use in Germany.\n\nWe make sure your paperwork is accurate and meets all the necessary standards.\n\nGet your documents in order with Herzi.`,
   },
   {
@@ -76,7 +77,7 @@ export default function HerziFeatures() {
         end: () => `+=${extra}`,
         pin: left,
         pinSpacing: true,
-        anticipatePin: 1,  // ADDED: This pre-adds the pin spacer slightly early to prevent jump/spring on activation
+        anticipatePin: 1, // ADDED: This pre-adds the pin spacer slightly early to prevent jump/spring on activation
         // toggle a class so we only center while pinned
         // onToggle: (self) => {
         //   if (self.isActive) left.classList.add("herzi-pinned");
@@ -163,7 +164,7 @@ export default function HerziFeatures() {
 
     const refreshTimeout = window.setTimeout(
       () => ScrollTrigger.refresh(),
-      300  // INCREASED: From 200ms to 300ms for better layout settling (fonts/images)
+      300 // INCREASED: From 200ms to 300ms for better layout settling (fonts/images)
     );
 
     return () => {
@@ -183,7 +184,10 @@ export default function HerziFeatures() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* LEFT: normal flow (NO sticky/top-1/2) — GSAP will pin and add .herzi-pinned while pinned */}
           <div>
-            <div className="space-y-5 sm:space-y-6 opacity-0 -translate-y-2" ref={leftRef}>
+            <div
+              className="space-y-5 sm:space-y-6 opacity-0 -translate-y-2"
+              ref={leftRef}
+            >
               <div className="inline-flex items-center gap-2 text-lg sm:text-xl">
                 <AudioLines className="size-5 sm:size-6" /> Core features
               </div>
@@ -230,7 +234,10 @@ export default function HerziFeatures() {
                 }}
               >
                 <div className="panel-inner max-w-3xl space-y-8">
-                  <div className="flex items-center gap-4">
+                  <div className="flex gap-4 items-center">
+                    <p className="text-2xl xl:text-3xl font-medium bg-white h-fit p-2 rounded-md">
+                      {feature.emoji}
+                    </p>
                     <h3 className="text-2xl xl:text-3xl font-medium">
                       {feature.title}
                     </h3>

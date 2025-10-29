@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/privacy-policy",
       },
     ],
-    sitemap: "herziacademy.com/sitemap.xml",
+    sitemap: "https://herziacademy.com/sitemap.xml",
   };
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
 import { LiaLinkedinIn } from "react-icons/lia";
+import { FaYoutube } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -70,6 +71,13 @@ export function Footer() {
                 target="_blank"
               >
                 <AiFillInstagram size={24} />
+              </Link>
+              <Link
+                className=" text-white transition-colors duration-300 transform hover:text-[#fd0a0a]"
+                href="https://www.youtube.com/@HerziGermanAcademy"
+                target="_blank"
+              >
+                <FaYoutube size={24} />
               </Link>
             </div>
           </div>
